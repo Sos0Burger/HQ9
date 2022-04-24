@@ -39,6 +39,9 @@ public class Main {
                         System.out.println("Норм с головой?");
                     }
                 }
+                case("exit"):{
+                    System.exit(0);
+                }
             }
         }
     }
