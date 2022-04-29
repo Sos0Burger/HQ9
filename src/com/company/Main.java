@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -19,7 +21,8 @@ public class Main {
                 case("q"):{
                     System.out.println("True or False?");
                     input = in.nextLine();
-                    if(input.equalsIgnoreCase("true")|input.equals("1")){
+                    Matcher m = Pattern.compile("((t|T)+)((r|R)+)((u|U|y|Y)+)((e|E)+)").matcher(input);
+                    if(m.matches()|input.equals("1")){
                         System.out.println("True!");
                     }
                     else{
