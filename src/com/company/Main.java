@@ -21,7 +21,7 @@ public class Main {
                 case("q"):{
                     System.out.println("True or False?");
                     input = in.nextLine();
-                    Matcher m = Pattern.compile("((t|T)+)((r|R)+)((u|U|y|Y)+)((e|E)+)").matcher(input);
+                    Matcher m = Pattern.compile("((t|T){1,2})((r|R){1,2})((u|U|y|Y){1,2})((e|E){1,2})").matcher(input);
                     if(m.matches()|input.equals("1")){
                         System.out.println("True!");
                     }
