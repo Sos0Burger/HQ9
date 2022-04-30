@@ -21,7 +21,7 @@ public class Main {
                 case("q"):{
                     System.out.println("True or False?");
                     input = in.nextLine();
-                    Matcher m = Pattern.compile("((t|T){1,2})((r|R){1,2})((u|U|y|Y){1,2})((e|E){1,2})").matcher(input);
+                    Matcher m = Pattern.compile("(((\\w){1,2})((r|R))((u|U))((e|E)))|((\\w)((r|R){1,2})((u|U))((e|E)))|((\\w)((r|R))((u|U){1,2})((e|E)))|((\\w)((r|R))((u|U))((e|E){1,2}))  |  ((((T|t){1,2})(\\w)((u|U))((e|E)))|((T|t((\\w){1,2})((u|U))((e|E)))|((T|t)((\\w))((u|U){1,2})((e|E)))|((T|t)((\\w))((u|U))((e|E){1,2})))    |     ((((T|t){1,2})(R|r)(\\w)((e|E)))|((T|t((R|r){1,2})((\\w))((e|E)))|((T|t)((R|r))((\\w){1,2})((e|E)))|((T|t)((R|r))((\\w))((e|E){1,2}))))   |    ((((T|t){1,2})(R|r)((u|U))((\\w)))|((T|t((R|r){1,2})((u|U))((\\w)))|((T|t)(R|r)((u|U){1,2})((\\w)))|((T|t)((R|r))((u|U))((\\w){1,2})))))").matcher(input);
                     if(m.matches()|input.equals("1")){
                         System.out.println("True!");
                     }
